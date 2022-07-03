@@ -4,10 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="messi.ico" type="image/x-icon">
     <title>Document</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
 </head>
 <body>
-    <p>Hello World!!!</p>
+    <template class="repeatPara">
+        <p>Hello, my name is Jorge and I'm a web developer. I like to develop apps in Python, JS using React framework</p>
+    </template>
 </body>
+<script>
+    const para = document.querySelector(".repeatPara");
+    setInterval(()=>
+    {let newP = para.content.cloneNode(true);
+    document.body.append(newP);
+    },2000);
+</script>
 </html>
